@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tolong Maafin Aku Yah? 🥺</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffe6e9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 90%;
+      z-index: 10;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Overlay Pembuka */
+    #startOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(255, 230, 233, 0.98);
+      z-index: 999999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #startBtn {
+      background-color: #ff4d6d;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 13.5px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      min-height: 50px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+      width: 48%;
+      transition: transform 0.2s ease;
+    }
+
+    #noBtn {
+      background-color: #ccc;
+      color: #333;
+      width: 48%;
+      position: relative;
+      z-index: 99;
+      transition: transform 0.15s ease;
+    }
+
+    .link-btn {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      text-decoration: none;
+      padding: 12px 0;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+      color: white;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .option-btn {
+      background-color: #ff758f;
+      color: white;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 12px 15px;
+      border-radius: 20px;
+      font-size: 13px;
+      text-align: left;
+      line-height: 1.4;
+      border: none;
+      cursor: pointer;
+    }
+
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      user-select: none;
+      pointer-events: none;
+      animation: fall linear forwards;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="https://files.catbox.moe/9r6cab.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="happyMusic" loop preload="auto">
+    <source src="https://www.myinstants.com/media/sounds/happy-happy-happy-cat.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="whooshSound" src="https://www.myinstants.com/media/sounds/whoosh-wind.mp3" preload="none"></audio>
+
+  <div id="startOverlay">
+    <button id="startBtn">Buka Pesan 💌</button>
+  </div>
+
+  <div class="container" id="mainCard">
+    <div id="slide1">
+      <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliPTUyNzltN2E5ajU3MXBwbjJ4cnN3dXBjc21nMjB2N3Z0b3h3b3JkN2k4dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wSxNZ8sksBiV2NVOfq/giphy.gif" alt="Crying meme">
+      <h1>sayangg aku minta maaf yah... 🥺</h1>
+      <p>ututuu sayangg, maaf yaa? akuu minta maaf karna aku engga ngabarin kamu waktu mau berangkat ke puncak dan ninggalin kamu tanpa ngasih kabar sebelum nya, maaf udah bikin kamu kesel, aku menyesal banget huhu(⁠╥⁠﹏⁠╥⁠), sayangg udah dong ngambeknya, kan aku kangen :(</p>
+      
+      <div class="btn-container">
+        <button id="noBtn" onmouseover="kabur()" onclick="kabur(event)" ontouchstart="kabur(event)">Gak Mau</button>
+        <button id="yesBtn" onclick="maafin()">Iya, Maafin</button>
+      </div>
+    </div>
+
+    <div id="slide2" class="hidden">
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliPTUyd29mNjZpczhkamswamhjdnA3dDdsMDF3NGh6aHF3azV5bGZsdW5qcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TjSPQgowhhJdHgvnwA/giphy.gif" alt="Happy meme">
+      <h1>HOREEEEE! makasihh saayanggg! 🥰</h1>
+      <p>eheheh bakalan aku coba buat lebih engga ngeselin lagii, aku kurang kurangin ngeselin nya sayang, sekarang ayoo kita baikan miaw miaw, kalo kamu masii ngerasa sedih atau bete coba peluk sucipto deh eheheh jangan lupa selain punya aku kamu juga punya sucipto yeayy, aku saayangg kamu:3</p>
+      
+      <a class="link-btn" style="background-color: #7209b7;" href="https://vt.tiktok.com/ZSq2NQYJh/" target="_blank">liat deh ini 🎬</a>
+      <button class="link-btn" style="background-color: #ff4d6d; border: none; cursor: pointer;" onclick="keSlide3()">aku punya sebuah pilihan buat kamu ✨</button>
+    </div>
+
+    <div id="slide3" class="hidden">
+      <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliPTUyOXllYzY1OHRuaDkzOWZkNmRxZDRsbXprYWFtdWV5NXZtZGpsODU0NHVxb2pydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LMuSfE0a5V4RS/giphy.gif" alt="Thinking meme">
+      <h1>PILIH OPSI KAMU 🎁</h1>
+      <p>Pilih salah satu penawaran spesial dari aku di bawah ini yaa!</p>
+
+      <button class="option-btn" onclick="pilihOpsi(1)">1. Maafin aku dan aku bakalan jadi lebih baik 🥺❤️</button>
+      <button class="option-btn" onclick="pilihOpsi(2)">2. Maafin aku dan kamu bakalan dapet 1 permintaan yang bakalan aku kabulkan (yang masuk akal jir) 🎁✨</button>
+      <button class="option-btn" onclick="pilihOpsi(3)">3. Kamu bisa pilih opsi ke-1 dan ke-2 sekaligus setelah maafin aku 🥰💖</button>
+    </div>
+
+    <div id="slide4" class="hidden">
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliPTUyOXllYzY1OHRuaDkzOWZkNmRxZDRsbXprYWFtdWV5NXZtZGpsODU0NHVxb2pydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LMuSfE0a5V4RS/giphy.gif" alt="Love meme">
+      <h1 id="slide4Title">SIAP CINTA! 💖</h1>
+      <p id="slide4Message">Klik tombol di bawah ini buat langsung kirim pilihan kamu ke Satria yaa! 🥰</p>
+      
+      <a id="waBtn" class="link-btn" style="background-color: #25D366;" href="#" target="_blank">minta ke satria 💬</a>
+    </div>
+  </div>
+
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const happyMusic = document.getElementById('happyMusic');
+    const whooshSound = document.getElementById('whooshSound');
+
+    document.getElementById('startBtn').addEventListener('click', function() {
+      document.getElementById('startOverlay').style.display = 'none';
+      
+      bgMusic.volume = 1.0;
+      const playPromise = bgMusic.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          document.body.addEventListener('click', function() {
+            bgMusic.play();
+          }, { once: true });
+        });
+      }
+
+      buatBungaGugur(15);
+    });
+
+    function kabur(event) {
+      if (event) { event.preventDefault(); }
+      try {
+        whooshSound.currentTime = 0;
+        whooshSound.play().catch(() => {});
+      } catch (e) {}
+
+      const noBtn = document.getElementById('noBtn');
+      const randomX = (Math.random() * 120) - 60;
+      const randomY = (Math.random() * 80) - 40;
+      noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+
+    function maafin() {
+      // Pause lagu awal, lalu ganti mainkan lagu Happy Happy Happy
+      bgMusic.pause();
+      happyMusic.currentTime = 0;
+      happyMusic.play().catch(() => {});
+
+      document.getElementById('slide1').classList.add('hidden');
+      document.getElementById('slide2').classList.remove('hidden');
+      buatBungaGugur(30);
+    }
+
+    function keSlide3() {
+      document.getElementById('slide2').classList.add('hidden');
+      document.getElementById('slide3').classList.remove('hidden');
+    }
+
+    function pilihOpsi(nomor) {
+      buatBungaGugur(25);
+      
+      let teksWA = "";
+
+      if (nomor === 1) {
+        alert("Yeay! Janji deh aku bakal berusaha jadi yang lebih baik buat kamu! 😘❤️");
+        teksWA = "sayang aku pilih opsi pertama:3";
+      } else if (nomor === 2) {
+        alert("Deal! 1 Permintaan kamu bakal aku turutin (asal masuk akal yaa xixixi)! 🎁✨");
+        teksWA = "sayang aku pilih opsi kedua:3";
+      } else if (nomor === 3) {
+        alert("Borongan nih yeee! Oke deal, aku bakal jadi lebih baik DAN turutin 1 permintaan kamu! 💖🎉");
+        teksWA = "sayang aku pilih opsi ketiga:3";
+      }
+
+      const waUrl = "https://wa.me/6281575032089?text=" + encodeURIComponent(teksWA);
+      document.getElementById('waBtn').href = waUrl;
+
+      document.getElementById('slide3').classList.add('hidden');
+      document.getElementById('slide4').classList.remove('hidden');
+    }
+
+    function buatBungaGugur(jumlah) {
+      const bungaList = ['🌸', '🌺', '🌷', '✨'];
+      for (let i = 0; i < jumlah; i++) {
+        setTimeout(() => {
+          const flower = document.createElement('div');
+          flower.classList.add('flower');
+          flower.innerText = bungaList[Math.floor(Math.random() * bungaList.length)];
+          flower.style.left = Math.random() * 100 + 'vw';
+          flower.style.fontSize = (Math.random() * 15 + 15) + 'px';
+          flower.style.animationDuration = (Math.random() * 2 + 2) + 's';
+          document.body.appendChild(flower);
+
+          setTimeout(() => flower.remove(), 4000);
+        }, i * 100);
+      }
+    }
+  </script>
+
+</body>
+</html>
